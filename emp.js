@@ -1,6 +1,6 @@
-const baseUrl = "http://localhost:3000/employees"; 
+const baseUrl = "http://localhost:3000"; 
 
-// Helper function to handle responses
+
 const handleResponse = (response) => {
   if (!response.ok) {
     throw new Error('Network response was not ok');
@@ -8,13 +8,13 @@ const handleResponse = (response) => {
   return response.json();
 }
 
-// Helper function to handle errors
+
 const handleError =(error) =>{
   console.error('Fetch Error:', error);
   
 }
 
-// Function to display employee information in an HTML element
+
 const displayEmployee =(employee)=> {
   const listItem = document.createElement("li");
   listItem.textContent = `${employee.id} -${employee.name} - ${employee.position} (${employee.department})`;
@@ -117,14 +117,9 @@ const deleteEmployee=async()=> {
   }
 }
 
-// --- Event Listeners (Example) ---
+
 document.getElementById("getAllButton").addEventListener("click", getAllEmployees);
 document.getElementById("getByIdButton").addEventListener("click", getEmployeeById);
-// Add Employee Event Listener
 document.getElementById("addButton").addEventListener("click", addEmployee); 
-
-// Update Employee Event Listener
 document.getElementById("updateButton").addEventListener("click", updateEmployee); 
-
-// Delete Employee Event Listener
 document.getElementById("deleteButton").addEventListener("click", deleteEmployee);
