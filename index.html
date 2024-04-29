@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+    <style>
+        body {
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+input[type="text"] {
+    padding: 8px;
+    margin: 5px 0;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+    </style>
+     </head>
+<body>
+    <h1>Employee Management</h1>
+
+    <section id="employeeListSection">
+        <h2>All Employees</h2>
+        <ul id="employeeList"></ul> 
+        <button id="getAllButton">Get All Employees</button>
+    </section>
+
+    <section id="employeeDetailsSection">
+        <h2>Employee Details</h2>
+        <div id="employeeInfo"></div>
+        <input type="text" id="employeeIdInput" placeholder="Enter Employee ID">
+        <button id="getByIdButton">Get Employee by ID</button>
+    </section>
+
+    <section id="addEmployeeSection">
+        <h2>Add Employee</h2>
+        <input type="text" id="employeeNameInput" placeholder="Name">
+        <input type="text" id="employeePositionInput" placeholder="Position">
+        <input type="text" id="employeeDepartmentInput" placeholder="Department">
+        <button id="addButton">Add Employee</button>
+    </section>
+
+    <section id="updateEmployeeSection">
+        <h2>Update Employee</h2>
+        <input type="text" id="updateEmployeeIdInput" placeholder="ID">
+        <input type="text" id="updateEmployeeNameInput" placeholder="Name">
+        <input type="text" id="updateEmployeePositionInput" placeholder="Position">
+        <input type="text" id="updateEmployeeDepartmentInput" placeholder="Department">
+        <button id="updateButton">Update Employee</button>
+    </section>
+
+    <section id="deleteEmployeeSection">
+        <h2>Delete Employee</h2>
+        <input type="text" id="deleteEmployeeIdInput" placeholder="ID">
+        <button id="deleteButton">Delete Employee</button>
+    </section>
+
+    <script src="emp.js"></script> </body>
+</html>
